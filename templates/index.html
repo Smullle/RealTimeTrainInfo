@@ -1,0 +1,83 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>RTI Enfield</title>
+</head>
+
+<body>
+  <div class="title">
+    <h1>Enfield - Train Departures in next 90 Mins</h1>
+  </div>
+  {% if trains.length != 0 %}
+  <table class="tftable" border="1">
+    <tr>
+      <th>Due In</th>
+      <th>Destination</th>
+      <th>Departure</th>
+      <th>Arrival at Destination</th>
+      <th>Origin</th>
+    </tr>
+    {% for train in trains %}
+    <tr>
+      <td>{{train[0]}}</td>
+      <td>{{train[1]}}</td>
+      <td>{{train[2]}}</td>
+      <td>{{train[3]}}</td>
+      <td>{{train[4]}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% else %}
+  <div class="title">
+    <h1>No Trains To Display</h1>
+  </div>
+  {% endif %}
+</body>
+
+</html>
+
+<style type="text/css">
+  .title {
+    text-align: center;
+  }
+
+  .tftable {
+    font-size: 12px;
+    color: #333333;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-width: 1px;
+    border-color: #a9a9a9;
+    border-collapse: collapse;
+  }
+
+  .tftable th {
+    font-size: 12px;
+    background-color: #b8b8b8;
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #a9a9a9;
+    text-align: left;
+  }
+
+  .tftable tr {
+    background-color: #ffffff;
+  }
+
+  .tftable td {
+    font-size: 12px;
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #a9a9a9;
+  }
+
+  .tftable tr:hover {
+    background-color: #ffff99;
+  }
+</style>
