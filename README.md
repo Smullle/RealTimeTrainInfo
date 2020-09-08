@@ -12,5 +12,5 @@ Templates folder contains files to be rendered by flask
   - Jinja code used to dynamically render based on train data (https://jinja.palletsprojects.com/en/2.11.x/)
 
 ![List of incoming trains](images/screen1.png?raw=true)
- ( --- )
+---
 ![No trains listed](images/screen2.png?raw=true)
